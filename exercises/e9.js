@@ -6,6 +6,10 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
+  let arr = data.planets.filter((planet) => {
+    return planet.id === 'earth';
+  })
+  return arr[0];
 }
 
 
