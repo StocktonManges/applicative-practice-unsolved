@@ -10,12 +10,30 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
-
+  let newArray = array.map(cb);
+  let min = 0;
+  let i = 0;
+  for (let index in newArray) {
+    if (newArray[index] < min || min === 0) {
+      min = newArray[index];
+      i = index;
+    }
+  }
+  return array[i];
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
-
+  let newArray = array.map(cb);
+  let max = 0;
+  let i = 0;
+  for (let index in newArray) {
+    if (newArray[index] > max) {
+      max = newArray[index];
+      i = index;
+    }
+  }
+  return array[i];
 }
 
 
