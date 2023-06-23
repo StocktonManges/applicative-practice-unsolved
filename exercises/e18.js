@@ -5,8 +5,6 @@
  */
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
   let yearArray = data.asteroids.map((asteroid) => asteroid.discoveryYear);
   let mostRepeats = 0;
   let i = 0;

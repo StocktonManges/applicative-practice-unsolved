@@ -9,7 +9,6 @@
  */
 
 export function minBy(array, cb) {
-  // Your code goes here...
   let newArray = array.map(cb);
   let min = 0;
   let i = 0;

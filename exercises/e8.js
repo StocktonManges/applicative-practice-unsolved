@@ -5,19 +5,9 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
-  let arr = data.planets.map((planet) => {
-    if (planet.moons != undefined) {
-      let moon = planet.moons.find((moon) => moon === moonName)
-      if (moon != undefined) {
-      return planet.name;
-      }
-    }
-  })
-  .filter((planetName) => {
-    return planetName != undefined;
-  });
-  return arr[0];
+  return data.planets
+    .filter((planet) => planet.moons)
+    .find((planet) => planet.moons.includes(moonName)).name;
 }
 
 
